@@ -53,6 +53,7 @@ export default function Signup() {
                         </div>
                             
                             <div className="">
+                                
                                 <Input placeholder={'First Name'} name= 'firstName' onChange={handleInputChange}/>
                                 <Input placeholder={'Last Name'} name='lastName' onChange={handleInputChange}/>
                                 <Input placeholder={'Email@email.com'} name='email' onChange={handleInputChange}/>

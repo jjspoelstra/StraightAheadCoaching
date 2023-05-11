@@ -21,9 +21,9 @@ export default function Description(){
                 <br />
                 <span className="mb-4"> E - Expand into Relaxed Flow </span>
               </div>
-              <div className="grid grid-cols-2 gap-4 mt-8">
+              <div className="grid ">
                 <img className="w-full rounded-lg" src="https://straightaheadcoaching.com/wp-content/uploads/2021/05/sunset-3195637_1920-tree-in-profound-stillness-wate-1280x800.jpg.webp" alt="office content 1" />
-                <img className="mt-4 w-full lg:mt-10 rounded-lg" src="https://straightaheadcoaching.com/wp-content/uploads/2021/11/rev-1280x800.jpg.webp" alt="office content 2" />
+                
               </div>
             </div>
           </section>
@@ -49,8 +49,8 @@ export default function Description(){
                 <span className="mb-4"> desc </span>
               </div>
               <div className="grid grid-cols-2 gap-4 mt-8">
-                <img className="w-full rounded-lg" src="https://straightaheadcoaching.com/wp-content/uploads/2021/05/sunset-3195637_1920-tree-in-profound-stillness-wate-1280x800.jpg.webp" alt="office content 1" />
-                <img className="mt-4 w-full lg:mt-10 rounded-lg" src="https://straightaheadcoaching.com/wp-content/uploads/2021/11/rev-1280x800.jpg.webp" alt="office content 2" />
+                <img className="w-full rounded-lg" src="" alt="other pic" />
+                <img className="mt-4 w-full lg:mt-10 rounded-lg" src="" alt="other pic" />
               </div>
             </div>
           </section>

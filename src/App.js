@@ -25,3 +25,16 @@ function App() {
 
 
 export default App;
+
+
+
+// keep track of emails
+// mobile compliant
+// get text from mom for email, thank-you, and picture
+// title box
+
+// remove link to paid course?
+
+//host site
+
+
