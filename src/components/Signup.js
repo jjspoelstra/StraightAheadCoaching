@@ -58,7 +58,7 @@ export default function Signup() {
                                 <Input placeholder={'Last Name'} name='lastName' onChange={handleInputChange}/>
                                 <Input placeholder={'Email@email.com'} name='email' onChange={handleInputChange}/>
                             </div>
-                            <Button backgroundColor={'Blue'} text={'Sign Up'} type='submit'/>
+                            <Button backgroundColor={'steelBlue'} text={'Sign Up'} type='submit'/>
                     </form>
                 </div>
             )
@@ -72,20 +72,20 @@ export default function Signup() {
                             
                         
                             <div className='my-5'>
-                                <h2 className='rounded-md appearance-none relative block w-full px-3 py-2  placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-purple-500 focus:border-purple-500 focus:z-10 sm:text-sm'>Video: <a href="https://www.youtube.com/watch?v=D_gWJ5siyTU">D.A.R.E. to De-Stress</a></h2>
+                                <h2 className='rounded-md appearance-none relative block w-full px-3 py-2  placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-purple-500 focus:border-purple-500 focus:z-10 sm:text-sm '>Video: <a class = 'link link-underline link-underline-black' href="https://www.youtube.com/watch?v=D_gWJ5siyTU">D.A.R.E. to De-Stress</a></h2>
                             </div> 
                                 
                             <div className='my-5'>
-                                <h2 className='rounded-md appearance-none relative block w-full px-3 py-2   placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-purple-500 focus:border-purple-500 focus:z-10 sm:text-sm'>Handout: <a href=""></a></h2>
+                                <h2 className='rounded-md appearance-none relative block w-full px-3 py-2   placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-purple-500 focus:border-purple-500 focus:z-10 sm:text-sm'>Handout: <a class = 'link link-underline link-underline-black' href=""></a></h2>
                             </div> 
     
                             <div className='my-5'>
-                                <h2 className='rounded-md appearance-none relative block w-full px-3 py-2   placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-purple-500 focus:border-purple-500 focus:z-10 sm:text-sm'>Other: <a href=""></a></h2>
+                                <h2 className='rounded-md appearance-none relative block w-full px-3 py-2   placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-purple-500 focus:border-purple-500 focus:z-10 sm:text-sm'>Other: <a class = 'link link-underline link-underline-black' href=""></a></h2>
                             </div> 
     
                        
                             <div onClick={handleCourseClick}>
-                                <Button backgroundColor={'Blue'} text={'See our other offerings!'} />
+                                <Button backgroundColor={'steelBlue'} text={'See our other offerings!'} />
                             </div>
                             
                     </div>
@@ -107,7 +107,7 @@ export default function Signup() {
                             <Input placeholder={'Last Name'} name='lastName' onChange={handleInputChange}/>
                             <Input placeholder={'Email@email.com'} name='email' onChange={handleInputChange}/>
                         </div>
-                        <Button backgroundColor={'Blue'} text={'Sign Up'} type='submit'/>
+                        <Button backgroundColor={'steelBlue'} text={'Sign Up'} type='submit'/>
                 </form>
             </div>
         )

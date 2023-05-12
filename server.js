@@ -1,6 +1,8 @@
 const express = require('express')
 const nodemailer = require('nodemailer')
 const cors = require('cors')
+const connectDB = require('./database')
+const User = require('./userSchema');
 
 require('dotenv').config({ path: './public/.env' });
 const app = express()
@@ -12,7 +14,7 @@ app.use(express.json())
 app.use(cors())
 app.use(express.urlencoded({ extended: true }))
 
-
+connectDB()
 
 
 //post request to create an email
@@ -21,6 +23,24 @@ app.post('/api/send-email', async (req, res) =>{
     const videoLink = 'videoLink'
     const handoutLink = 'handoutLink'
     console.log(req.body)
+
+
+    //save user in database
+            const newUser = new User({
+                firstName,
+                lastName,
+                email
+            })
+            try {
+                await newUser.save();
+                console.log('User saved to MongoDB');
+                // Handle success response
+                
+            } catch (error) {
+                console.error(error);
+                // Handle error response
+                
+            }
 
     //logging into email
     const transporter = nodemailer.createTransport({
@@ -42,13 +62,12 @@ app.post('/api/send-email', async (req, res) =>{
     }
 
     try {
-        //sending the email
-        const info = await transporter.sendMail(message)
-        console.log('Email send:', info.response)
-        res.status(200).json({ message: 'Email send' })
-    } catch (error) {
-        console.error(error);
-        res.status(500).json({ error: 'Error sending email' });
+        const info = await transporter.sendMail(message);
+        console.log('Email sent:', info.response);
+        res.status(200).json({ message: 'Email sent successfully' });
+      } catch (error) {
+        console.error('Error sending email:', error);
+        res.status(500).json({ error: 'Error sending email. Please try again later.' });
       }
     
     

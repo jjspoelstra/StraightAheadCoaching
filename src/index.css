@@ -6,20 +6,17 @@
   padding: 0;
 }
 
-#background{
-  background-color: ;
-}
+/* #background{
+  background-color: 
+} */
 
 body {
   font-family: 'Poppins', sans-serif;
 }
 
 .container {
-  max-width: fit-content;
   margin: 30px auto;
-  overflow: auto;
-  min-height: fit-content;
-  border: 1px solid steelblue;
+  border: 3px solid steelblue;
   padding: 30px;
   border-radius: 5px;
 }
@@ -116,9 +113,52 @@ footer {
   text-align: center;
 }
 
+.link-underline {
+  border-bottom-width: 0;
+  background-image: linear-gradient(transparent, transparent), linear-gradient(#fff, #fff);
+  background-size: 0 3px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size .4s ease-in-out;
+}
+
+.link-underline-black {
+  background-image: linear-gradient(transparent, transparent), linear-gradient(steelblue, steelblue)
+}
+
+.link-underline:hover {
+  background-size: 100% 3px;
+  background-position: 0 100%
+}
+
+
+@keyframes underlineAnimation {
+  from {
+    background-size: 0 4px;
+    background-position: 0 100%;
+  }
+  to {
+    background-size: 100% 4px;
+    background-position: 0 100%;
+  }
+}
+
+.autoAnimateTitleUnderline {
+  background-image: linear-gradient(transparent, transparent), linear-gradient(steelblue, steelblue);
+  background-repeat: no-repeat;
+  animation: underlineAnimation 1s ease-in-out forwards;
+  display: inline;
+  box-decoration-break: clone;
+
+}
+
+
 
 
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+
