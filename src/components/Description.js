@@ -46,7 +46,7 @@ export default function Description(){
                 <span className="mb-4"> E - Expand into Relaxed Flow </span>
               </div>
               <div className="grid ">
-                <img className="w-full rounded-lg" src="https://straightaheadcoaching.com/wp-content/uploads/2021/05/sunset-3195637_1920-tree-in-profound-stillness-wate-1280x800.jpg.webp" alt="office content 1" />
+                <img className="w-full rounded-lg" src="/dare.jpg" alt="Stacked rocks and a lotus flower on a relaxing blue background" />
                 
               </div>
             </div>
