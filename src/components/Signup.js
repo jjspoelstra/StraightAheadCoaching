@@ -14,11 +14,12 @@ export default function Signup() {
     const [errorMessage, setErrorMessage] = useState('')
     const [orderID, setOrderId] = useState(false)
 
+    //this is creating an order for paypal
     const createOrder = (data, actions) => {
         return actions.order.create({
             purchase_units: [
                 {
-                    discription: 'course',
+                    description: 'course',
                     amount: {
                         currency_code: 'USD',
                         value: 20
@@ -35,48 +36,56 @@ export default function Signup() {
         })
     }
     
+    //once the payment is approved, we set the payment success to true
     const onApprove = (data, actions) => {
         return actions.order.capture().then(function (details) {
             const {payer} = details
             setSuccess(true)
+            console.log('payment accepted, email logged')
+            sendData()
         })
     }
 
+    //this appears if the payment does not go through
     const onError = (data, actions) => {
         setErrorMessage('An error occured with your payment')
     }
 
-    //const { course, setCourse } = useContext(CourseContext)
-    
+  
+    //this keeps track of the form inputs and updates the formData state. 
     const handleInputChange = (event) => {
         const {name, value} = event.target
         setFormData((prevState) => ({
             ...prevState,
             [name]: value,
         }))
-        
     }
 
-    const handleSubmit = async (event) => {
+    //this registers when the form is submitted - in order to show the payment screen. It also console logs the information we want to keep track of if the payment goes through. 
+    const handleFormSubmit = async (event) => {
         event.preventDefault(); // prevent form submission
         setSubmitted(true);
         console.log(formData)
+    }
+
+    //this will keep track of the email and store it in our database. Will only be triggered if the payment has gone through successfully. 
+    const sendData = async () => {
         const response = await fetch('http://localhost:2121/api/send-email', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify(formData)
-        })
-        const data = await response.json()
-        console.log(data)
+        });
+        const data = await response.json();
+        console.log(data);
     }
 
-    
-  
-        return(
+    //this is the form that appears if they have not submitted their information yet. 
+    if (submitted === false){
+        return( //want to add functionality to prevent button from being clicked if they haven't added their information//
             <div className="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
-                <form className="container" onSubmit={handleSubmit}>
+                <form className="container-login" onSubmit={handleFormSubmit}>
                     <div className="sm:mx-auto sm:w-full sm:max-w-sm">
                         <h2 className="mt-5 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">Register for the paid course</h2>
                     </div>
@@ -84,12 +93,25 @@ export default function Signup() {
                         <div className="">
                             <Input placeholder={'First Name'} name= 'firstName' onChange={handleInputChange}/>
                             <Input placeholder={'Last Name'} name='lastName' onChange={handleInputChange}/>
-                            <Input placeholder={'Email@email.com'} name='email' onChange={handleInputChange}/>
+                            <Input placeholder={'email@email.com'} name='email' onChange={handleInputChange}/>
                         </div>
-                        {!submitted ? 
-                            <Button backgroundColor={'steelBlue'} text={'Continue to Payment'} type='submit'/> : 
-                            
-                        
+                         
+                            <Button backgroundColor={'steelBlue'} text={'Continue to Payment'} type='submit'/>  
+                </form>
+            </div>
+        )
+    } else if (submitted ===true && success != true){
+        return(
+            <div className="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
+                <form className="container-login" >
+                    <div className="sm:mx-auto sm:w-full sm:max-w-sm">
+                        <h2 className="mt-5 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">Order Summary:</h2>
+                        <span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit, necessitatibus, quos quas rerum repudiandae delectus porro fugit sequi in ratione, iusto doloribus nihil eius veritatis? Voluptas assumenda iusto rerum aut?</span>
+                            <br />
+                        description
+                        <br />
+                        description
+                    </div>
                             <PayPalScriptProvider 
                                     options={{
                                         'client-id': 
@@ -105,11 +127,29 @@ export default function Signup() {
                                     //onClick={}
                                 />
                                 </PayPalScriptProvider> 
-                        }
+                        
                         
                 </form>
             </div>
         )
+    } else {
+        return(
+            <div className="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
+                <form className="container-login" >
+                    <div className="sm:mx-auto sm:w-full sm:max-w-sm">
+                        <h2 className="mt-5 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">Thanks for your purchase!</h2>
+                        <span>A message containing your items has been sent to your inbox.</span>
+                            <br />
+                        more
+                        <br />
+                        more
+                    </div>
+                            
+                </form>
+            </div>
+        )
+    }
+        
      
         // return (
         //     <div className="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">

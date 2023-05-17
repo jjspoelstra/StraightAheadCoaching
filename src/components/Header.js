@@ -10,7 +10,7 @@ const Header = ({ src }) => {
     return(
         
     <nav className="bg-white border-gray-200 dark:bg-gray-900">
-        <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+        <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto px-2 ">
             <a href="https://straightaheadcoaching.com/" className="flex items-center">
             <img src= {src} className="h-20 mr-3" alt={src} />
             <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">  </span>

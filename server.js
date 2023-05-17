@@ -2,7 +2,7 @@ const express = require('express')
 const nodemailer = require('nodemailer')
 const cors = require('cors')
 const connectDB = require('./database')
-const User = require('./userSchema');
+const Signup = require('./userSchema');
 
 require('dotenv').config({ path: './public/.env' });
 const app = express()
@@ -26,13 +26,13 @@ app.post('/api/send-email', async (req, res) =>{
 
 
     //save user in database
-            const newUser = new User({
+            const newSignup = new Signup({
                 firstName,
                 lastName,
                 email
             })
             try {
-                await newUser.save();
+                await newSignup.save();
                 console.log('User saved to MongoDB');
                 // Handle success response
                 

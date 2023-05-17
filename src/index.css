@@ -12,13 +12,24 @@
 
 body {
   font-family: 'Poppins', sans-serif;
+  /* background-color: skyblue; */
 }
 
 .container {
-  margin: 30px auto;
+  margin: 1% auto;
   border: 3px solid steelblue;
-  padding: 30px;
+  padding: 20px;
   border-radius: 5px;
+  min-width: 400px;
+}
+
+.container-login {
+  margin: 1% auto;
+  border: 3px solid steelblue;
+  padding: 20px;
+  border-radius: 5px;
+  width: 400px;
+  height: 350px
 }
 
 .header {
