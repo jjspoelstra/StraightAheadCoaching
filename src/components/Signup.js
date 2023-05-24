@@ -106,11 +106,15 @@ export default function Signup() {
                 <form className="container-login" >
                     <div className="sm:mx-auto sm:w-full sm:max-w-sm">
                         <h2 className="mt-5 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">Order Summary:</h2>
-                        <span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit, necessitatibus, quos quas rerum repudiandae delectus porro fugit sequi in ratione, iusto doloribus nihil eius veritatis? Voluptas assumenda iusto rerum aut?</span>
-                            <br />
-                        description
                         <br />
-                        description
+                        <ul>
+                            <li>- Access to 5 pre-recorded sessions</li>
+                            <br />
+                            <li>- A link to a live session</li>
+                            <br />
+                            <li>- Energy worksheet for self-use or with a client!</li>
+                        </ul>
+                        <br />
                     </div>
                             <PayPalScriptProvider 
                                     options={{
@@ -138,11 +142,17 @@ export default function Signup() {
                 <form className="container-login" >
                     <div className="sm:mx-auto sm:w-full sm:max-w-sm">
                         <h2 className="mt-5 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">Thanks for your purchase!</h2>
-                        <span>A message containing your items has been sent to your inbox.</span>
-                            <br />
-                        more
                         <br />
-                        more
+                        <ul>
+                            <li>A message containing your items has been sent to your inbox</li>
+                            <br />
+                            <li>Link to live session goes here</li>
+                            <br />
+                            <br />
+                            <br />
+                            <a href="https://straightaheadcoaching.com/services/" className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-blue-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"><Button text={'Try Our Other Services!'}/> </a>
+                        </ul>
+                        <br />
                     </div>
                             
                 </form>

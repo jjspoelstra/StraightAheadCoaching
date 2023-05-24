@@ -62,17 +62,17 @@ export default function Description(){
             <section className="bg-white dark:bg-gray-900">
             <div className="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
               <div className="font-light text-gray-500 sm:text-lg dark:text-gray-400">
-                <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white autoAnimateTitleUnderline ">Other Paid Course</h2>
+                <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white autoAnimateTitleUnderline ">Energy Coaching 101</h2>
                 <br />
                   <br />
-                <p className="mb-4"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, quas nobis! Facilis ipsum, totam ullam voluptates, deleniti a et libero corporis eum deserunt earum dicta reprehenderit explicabo cum nemo officia. Lorem ipsum dolor sit amet consectetur adipisicing elit. At et distinctio nesciunt eligendi veniam non enim placeat incidunt.  </p>
-                <span className="mb-4"> desc </span>
+                <p className="mb-4"> Everything you need to know about: coaching, coaching vs therapy, core energy coaching, who coaching is for. Ready to get started and change your life? Send me a DM or book a free Energy Audit via the link in bio. I can’t wait to hear about your dreams & goals!  </p>
+                <span className="mb-4"> Reframe & rewire your emotions and thoughts, so YOU ARE IN CHARGE not them. </span>
                 <br />
-                <span className="mb-4"> desc </span>
+                <span className="mb-4"> Repattern unconscious learned behaviors and experience internal FREEDOM to choose your actions. </span>
                 <br />
-                <span className="mb-4"> desc  </span>
+                <span className="mb-4">  Reconnect with the real, the awesome, the amazing YOU, and BELIEVE YOU ARE THAT. </span>
                 <br />
-                <span className="mb-4"> desc </span>
+                <span className="mb-4"> Release old beliefs and stories that have held you back, so you can LIVE A LIFE YOU LOVE. </span>
               </div>
               <div className="grid">
                 <img className="w-full rounded-lg" src="/paid.jpg" alt="a humanoid shape of energy" />
