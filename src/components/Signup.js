@@ -70,7 +70,7 @@ export default function Signup() {
 
     //this will keep track of the email and store it in our database. Will only be triggered if the payment has gone through successfully. 
     const sendData = async () => {
-        const response = await fetch('http://localhost:2121/api/send-email', {
+        const response = await fetch('https://straight-ahead-energy101signup-245fd68098ce.herokuapp.com/api/send-email', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
