@@ -46,7 +46,7 @@ export default function Description(){
                 <span className="mb-4"> E - Expand into Relaxed Flow </span>
               </div>
               <div className="grid ">
-                <img className="w-full rounded-lg" src="/dare.jpg" alt="Stacked rocks and a lotus flower on a relaxing blue background" />
+                <img className="w-full rounded-lg" src="https://res.cloudinary.com/doer2p9vb/image/upload/v1687312702/paid.jpg" alt="Stacked rocks and a lotus flower on a relaxing blue background" />
                 
               </div>
             </div>
@@ -75,7 +75,7 @@ export default function Description(){
                 <span className="mb-4"> Release old beliefs and stories that have held you back, so you can LIVE A LIFE YOU LOVE. </span>
               </div>
               <div className="grid">
-                <img className="w-full rounded-lg" src="/paid.jpg" alt="a humanoid shape of energy" />
+                <img className="w-full rounded-lg" src="https://res.cloudinary.com/doer2p9vb/image/upload/v1687312702/paid.jpg" alt="a humanoid shape of energy" />
                 
               </div>
             </div>
