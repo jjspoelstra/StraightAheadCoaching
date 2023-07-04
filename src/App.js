@@ -26,6 +26,7 @@ function App() {
 
   return (
     <CourseProvider>
+      <>
       <div className="container">
         <Header src="https://straightaheadcoaching.com/wp-content/uploads/2021/11/logo-word-resized.jpg.webp" />
         <div className={`place-content-evenly ${isMobile ? "" : "flex"}`}>
@@ -34,6 +35,8 @@ function App() {
         </div>
         <Footer />
       </div>
+      </>
+      
     </CourseProvider>
   );
 }

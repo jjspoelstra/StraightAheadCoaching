@@ -17,17 +17,17 @@ body {
 
 .container {
   margin: 1% auto;
-  border: 3px solid steelblue;
+  border: 2px solid steelblue;
   padding: 20px;
-  border-radius: 5px;
+  border-radius: 2px;
   min-width: 400px;
 }
 
 .container-login {
   margin: 1% auto;
-  border: 3px solid steelblue;
+  border: 2px solid steelblue;
   padding: 20px;
-  border-radius: 5px;
+  border-radius: 2px;
   width: 400px;
   height: 350px
 }
@@ -130,6 +130,7 @@ footer {
   background-size: 0 3px;
   background-position: 0 100%;
   background-repeat: no-repeat;
+  padding-top: 5%;
   transition: background-size .4s ease-in-out;
 }
 
@@ -160,7 +161,7 @@ footer {
   animation: underlineAnimation 1s ease-in-out forwards;
   display: inline;
   box-decoration-break: clone;
-
+  padding-top: 1%
 }
 
 
